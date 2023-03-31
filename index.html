@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DayJS Format</title>
+    <title>Form Input Sheet Thing</title>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css" />
 
@@ -24,8 +24,8 @@
 
   </head>
   <body>
-    <header>
-
+    <header>        
+        <p id="time"></p>
     </header>
     <main>
         <section id="hero">
@@ -37,7 +37,43 @@
         </section>
         <!-- input form -->
         <section id="form">
-
+            <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <h3>Skills Form</h3>
+                    <form id="skills-form">
+                      <div class="row py-3">
+                        <label for="skill" class="col-sm-4 col-form-label"
+                          >Skill Name:
+                        </label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="skill-name" />
+                        </div>
+                      </div>
+                      <div class="row py-3">
+                        <label for="date" class="col-sm-4 col-form-label">Date: </label>
+                        <div class="col-sm-8">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="datepicker"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                      <div class="py-3">
+                        <button type="submit" value="Submit" class="btn btn-info">
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-6">
+                    <h3>List of Skills:</h3>
+                    <ul class="list-group" id="skills-list"></ul>
+                  </div>
+                </div>
+              </div>
         </section>
 
     </main>
