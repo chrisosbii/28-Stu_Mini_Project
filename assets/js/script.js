@@ -4,6 +4,7 @@ var form = $('#form');
 var nameInputEl = $('#skill-name');
 var dateInputEl = $('#datepicker');
 var skillsListEl = $('#skills-list');
+var timer = $('#time');
 
 /* Functions */
 
@@ -12,11 +13,16 @@ var skillsListEl = $('#skills-list');
  */
 function currentTime(){
     today = dayjs();
-
+    timer.text(today.format("MMM D, YYYY HH:mm:ss A"));
+    console.log('in currentTime');
 }
 
+/**
+ * When loading page this runs
+ */
 function renderPage(){
-    setInterval(currentTime(), 1000);
+    currentTime();
+    setInterval(currentTime, 1000);
 }
 
 renderPage();
