@@ -11,5 +11,10 @@ var skillsListEl = $('#skills-list');
  * Current Time updates the current time object with the latest time
  */
 function currentTime(){
+    today = dayjs();
+    
+}
 
+function renderPage(){
+    setInterval(currentTime(), 1000);
 }
