@@ -12,9 +12,11 @@ var skillsListEl = $('#skills-list');
  */
 function currentTime(){
     today = dayjs();
-    
+
 }
 
 function renderPage(){
     setInterval(currentTime(), 1000);
 }
+
+renderPage();
